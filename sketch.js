@@ -29,9 +29,9 @@ function setup() {
 	ground=Bodies.rectangle(650,380,1300,20,ground_options);
 	World.add(world,ground);
 	waste1=new waste(200,300,20);
-	dustbin1=new dustbin(900,300,15,100);
-	dustbin2=new dustbin(977,360,160,15);
-	dustbin3=new dustbin(1060,300,15,100);
+	dustbin1=new dustbin(900,300,15,150);
+	dustbin2=new dustbin(1040,360,250,15);
+	dustbin3=new dustbin(1180,300,15,150);
 	Engine.run(engine);
 }
 
@@ -45,14 +45,19 @@ function draw() {
   rect(ground.position.x,ground.position.y,1300,20);
 
   dustbin1.display();
-  
-  dustbin2.display();
- 
-  dustbin3.display();
-  
+   dustbin2.display();
+   dustbin3.display();
+   keyPressed();
   drawSprites();
  
 }
+function keyPressed(){
 
+	if(keyCode===UP_ARROW){
+
+	Matter.Body.applyForce(waste1.body,waste1.body.position,{x:1,y:-4});
+
+	}
+}
 
 

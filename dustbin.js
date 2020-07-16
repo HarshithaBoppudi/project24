@@ -14,10 +14,14 @@ class dustbin{
         World.add(world, this.body);
       }
       display(){
-        // rotate(angle);
-        //translate(this.body.position.x, this.body.position.y);
-        fill("red");
+        fill("aqua");
+        push();
+       
+        translate(this.body.position.x, this.body.position.y);
+       
         rectMode(CENTER);
-        rect(this.body.position.x,this.body.position.y ,this. width,this.height)
+        pop();
+        rect(this.body.position.x,this.body.position.y ,this. width,this.height);
+       
       }
 }

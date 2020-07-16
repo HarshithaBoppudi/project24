@@ -2,7 +2,7 @@ class waste{
         constructor(x, y,radius) {
                 var options = {
                      isStatic:false,   
-                    restitution :0.8,
+                    restitution :1,
                     friction:1.0,
                     density:1.0
                 }
@@ -14,8 +14,11 @@ class waste{
                 World.add(world, this.body);
               }
               display(){
+                push();
+                fill("pink");
                 translate(this.body.position.x, this.body.position.y);
                 ellipseMode(RADIUS);
-                ellipse(0,0,this.radius,this.radius)
+                ellipse(0,0,this.radius,this.radius);
+                pop();
               } 
       }
