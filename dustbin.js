@@ -10,11 +10,13 @@ class dustbin{
         this.x=x;
         this.y=y;
         this.body = Bodies.rectangle(this.x, this.y,this.width,this.height, options);
-      
+        //this.dustbin1=loadImage("project24/dustbingreen.png");
         World.add(world, this.body);
       }
       display(){
+       // image(this.dustbin1,900,300)
         fill("aqua");
+        
         push();
        
         translate(this.body.position.x, this.body.position.y);
