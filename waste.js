@@ -10,16 +10,18 @@ class waste{
                 this.y=y;
                 this.radius=radius;
                 this.body =Bodies.circle(this.x,this.y,this.radius,options);
-                this.waste1=loadImage(paper.png);
+                this.waste1=loadImage("paper.png");
                 World.add(world, this.body);
               }
               display(){
-                image(this.waste1,200,300)
+                image(this.waste1,20,200,70,70)
                 push();
                // fill("pink");
+               
                 translate(this.body.position.x, this.body.position.y);
-                ellipseMode(RADIUS);
-                ellipse(0,0,this.radius,this.radius);
+                image(this.waste1,20,200,70,70)
+                //ellipseMode(RADIUS);
+               // ellipse(0,0,this.radius,this.radius);
                 pop();
               } 
       }

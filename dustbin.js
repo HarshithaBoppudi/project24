@@ -10,20 +10,21 @@ class dustbin{
         this.x=x;
         this.y=y;
         this.body = Bodies.rectangle(this.x, this.y,this.width,this.height, options);
-        //this.dustbin1=loadImage("project24/dustbingreen.png");
+        this.dustbin1=loadImage("dustbingreen.png");
         World.add(world, this.body);
       }
       display(){
-       // image(this.dustbin1,900,300)
-        fill("aqua");
+       
+       // fill("aqua");
         
         push();
        
         translate(this.body.position.x, this.body.position.y);
-       
-        rectMode(CENTER);
+        imageMode(CENTER);
+        image(this.dustbin1,0,0,200,200);
+       // rectMode(CENTER);
         pop();
-        rect(this.body.position.x,this.body.position.y ,this. width,this.height);
+       // rect(this.body.position.x,this.body.position.y ,this. width,this.height);
        
       }
 }
